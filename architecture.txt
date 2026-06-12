@@ -1,0 +1,43 @@
++----------------------+
+|      Wazuh SIEM      |
++----------+-----------+
+|
+| Alert
+v
++----------------------+
+| Automation Container |
+|   Python Script      |
++----------+-----------+
+|
+| Alert Text
+v
++----------------------+
+|  Ollama (Llama 3.2)  |
+| AI Classification    |
++----------+-----------+
+|
+| Classification
+v
++----------------------+
+| Allowlisted Actions  |
++----------+-----------+
+|
++-----+-----+
+|           |
+v           v
+
+Kill Process   Disable User
+
+```
+ |           |
+ +-----+-----+
+       |
+       v
+
+ Verification
+
+       |
+       v
+```
+
+Audit Log / Rollback

@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+ollama:
+image: ollama/ollama
+container_name: ollama
+ports:
+- "11434:11434"
+restart: unless-stopped
+
+automation:
+image: python:3.11
+container_name: automation
+working_dir: /app
+volumes:
+- ./automation:/app
+command: tail -f /dev/null
+depends_on:
+- ollama
